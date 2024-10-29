@@ -1,0 +1,31 @@
+{
+  "name": "Python Development Container",
+  "dockerComposeFile": "compose.yml",
+  "service": "app",
+  "workspaceFolder": "/opt/app",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "tamasfe.even-better-toml",  // Even Better TOML: TOML language
+        "iliazeus.vscode-ansi",
+        "streetsidesoftware.code-spell-checker", // Code Spell Checker: Spelling checker for source code
+        "oderwat.indent-rainbow",  // Indent Rainbow: Colorizes indentation in source code
+        "christian-kohler.path-intellisense",  // Path Intellisense: Autocompletes filenames
+        "shardulm94.trailing-spaces",  // Trailing Spaces: Highlights trailing spaces
+        "eamodio.gitlens",  // GitLens: Git supercharged
+        "donjayamanne.githistory",  // Git History: View and search Git history
+        "mhutchie.git-graph",  // Git Graph: View a Git Graph of your repository
+        "gruntfuggly.todo-tree",  // Todo Tree: Show TODO, FIXME, etc. comments
+        "ms-python.python"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+        "python.venvPath": "${workspaceFolder}/.venv",
+        "python.analysis.extraPaths": [
+            "${workspaceFolder}/.venv/lib/python3.13/site-packages"
+        ]
+      }
+    }
+  }
+}
